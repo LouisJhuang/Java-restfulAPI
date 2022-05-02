@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <!-- 設定一個servlet -->
+    <!-- servlet的設定 -->
+    <servlet>
+        <!-- servlet的內部名稱，自定義。 -->
+        <servlet-name>MyServlet</servlet-name>
+        <!-- servlet的class全名： Package Name+class name -->
+        <servlet-class>com.uat.MyServlet</servlet-class>
+    </servlet>
+    <!-- servlet的映射設定 -->
+    <servlet-mapping>
+        <!-- servlet的內部名稱，一定要和上面的內部名稱一致! -->
+        <servlet-name>MyServlet</servlet-name>
+        <!-- servlet的映射路徑(URL Pattern) -->
+        <url-pattern>/MyServlet</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
